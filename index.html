@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fletes Milo - Mudanzas y Fletes Profesionales</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="assets/imagenes/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <script>
+        function toggleDropdown() {
+            var menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('show');
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('#dropdownMenuBtn')) {
+                var dropdowns = document.getElementsByClassName('dropdown-content');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: var(--color-blanco);
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            border-radius: 10px;
+            z-index: 100;
+            margin-top: 8px;
+        }
+        .dropdown-content a {
+            color: var(--color-primario);
+            padding: 14px 18px;
+            text-decoration: none;
+            display: block;
+            font-weight: 600;
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s, color 0.2s;
+        }
+        .dropdown-content a:last-child { border-bottom: none; }
+        .dropdown-content a:hover {
+            background: var(--color-acento);
+            color: var(--color-blanco);
+        }
+        .show { display: block; }
+        #navbar-right { display: flex; align-items: center; }
+    </style>
+</head>
+<body id="cuerpo">
+    <header id="barrasuperior">
+        <div class="padding" id="barrasuperior__ordenar">
+            <div id="barrasuperior__seccion1">
+                <img src="assets/imagenes/favicon_reverse.png" alt="Logo Fletes Milo" id="barrasuperior__seccion1__logoenp">
+                <h1 id="barrasuperior__seccion1__nombreweb">Fletes Milo</h1>
+            </div>
+            <div id="navbar-right">
+                <div class="dropdown">
+                    <button id="dropdownMenuBtn" onclick="toggleDropdown()" aria-haspopup="true" aria-expanded="false">☰ Menú</button>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <a href="paginas/sobre-nosotros.html">Sobre Nosotros</a>
+                        <a href="paginas/servicio.html">Servicio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="encabezado">
+            <img src="assets/imagenes/Header.png" alt="Camión de Fletes Milo" id="encabezado__contenedor__escudo">
+            <h2 id="encabezado__contenedor__titulo">Fletes y Mudanzas</h2>
+            <h3 id="encabezado__contenedor__subtitulo">Tu carga, nuestro compromiso. Servicio seguro, rápido y confiable.</h3>
+            <a href="paginas/contacto.html" class="btn-header" style="margin-top:18px;">Solicitar presupuesto</a>
+        </section>
+        <section id="seccion">
+            <div class="padding">
+                <hr class="separador">
+                <article id="seccion__articulo1">
+                    <div id="seccion__articulo1__contenedor1__subcontenedor">
+                        <h2 id="seccion__articulo1__contenedor1__subcontenedor__titulo">Nuestros Servicios</h2>
+                    </div>
+                    <div id="seccion__articulo1__contenedor2">
+                        <div id="seccion__articulo1__contenedor2__subcontenedor1">
+                            <ul style="font-size:1.1rem; line-height:1.7;">
+                                <li>Fletes y mudanzas locales y nacionales</li>
+                                <li>Traslado de muebles, electrodomésticos y objetos delicados</li>
+                                <li>Servicio express y programado</li>
+                                <li>Asesoramiento personalizado</li>
+                                <li>Presupuesto sin cargo</li>
+                            </ul>
+                        </div>
+                        <div id="seccion__articulo1__contenedor2__subcontenedor2">
+                            <img src="assets/imagenes/camion_familia.png" alt="Equipo de Fletes Milo" style="background:#e3eaf2; width:300px; height:200px; object-fit:contain; border-radius:12px;">
+                        </div>
+                    </div>
+                </article>
+                <hr class="separador">
+                <article id="seccion__articulo2">
+                    <div id="seccion__articulo2__contenedor1__subcontenedor">
+                        <h2 id="seccion__articulo2__contenedor1__subcontenedor__titulo">¿Por qué elegirnos?</h2>
+                    </div>
+                    <div id="seccion__articulo2__contenedor2">
+                        <div style="flex:1;">
+                            <ul style="font-size:1.1rem; line-height:1.7;">
+                                <li>+15 años de experiencia en el rubro</li>
+                                <li>Personal capacitado y trato cordial</li>
+                                <li>Unidades modernas y equipadas</li>
+                                <li>Seguimiento y comunicación constante</li>
+                                <li>Seguro de carga incluido</li>
+                            </ul>
+                        </div>
+                        <div style="flex:1; display:flex; align-items:center; justify-content:center;">
+                            <img src="assets/imagenes/Senderismo.png" alt="Servicio profesional" style="background:#e3eaf2; width:220px; height:150px; object-fit:contain; border-radius:12px;">
+                        </div>
+                    </div>
+                </article>
+                <hr class="separador">
+                <article id="seccion__articulo3">
+                    <div id="seccion__articulo3__contenedor1__subcontenedor">
+                        <h2 id="seccion__articulo3__contenedor1__subcontenedor__titulo">Testimonios</h2>
+                    </div>
+                    <div id="seccion__articulo3__contenedor2" style="display:flex; gap:24px; flex-wrap:wrap; justify-content:center;">
+                        <blockquote style="background:#fff; border-left:4px solid var(--color-acento); padding:18px 22px; border-radius:10px; max-width:340px; box-shadow:var(--sombra);">
+                            "Excelente servicio, puntuales y muy cuidadosos con mis cosas. ¡Recomendados!"<br><span style="font-weight:600; color:var(--color-secundario);">- Laura G.</span>
+                        </blockquote>
+                        <blockquote style="background:#fff; border-left:4px solid var(--color-verde); padding:18px 22px; border-radius:10px; max-width:340px; box-shadow:var(--sombra);">
+                            "Me resolvieron la mudanza en el día y todo llegó perfecto. Muy profesionales."<br><span style="font-weight:600; color:var(--color-secundario);">- Martín P.</span>
+                        </blockquote>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer id="pie">
+        <div class="footer-wrapper padding">
+            <div class="footer-columns" style="justify-content:center;">
+                <div style="display:flex; gap:20px; align-items:center;">
+                    <a href="#" title="Instagram"><img src="assets/instagram.svg" alt="Instagram" width="28"></a>
+                    <a href="#" title="Facebook"><img src="assets/linkedin.svg" alt="LinkedIn" width="28"></a>
+                    <a href="#" title="Twitter"><img src="assets/twitter.svg" alt="Twitter" width="28"></a>
+                    <a href="#" class="btn-footer" style="margin-left:20px;">Sobre Nosotros</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <small>© Fletes Milo. <span id="year"></span></small>
+            </div>
+        </div>
+        <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+    </footer>
+</body>
+</html>

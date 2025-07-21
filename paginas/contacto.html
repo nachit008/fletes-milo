@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Fletes Milo</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../assets/imagenes/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <script>
+        function toggleDropdown() {
+            var menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('show');
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('#dropdownMenuBtn')) {
+                var dropdowns = document.getElementsByClassName('dropdown-content');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: var(--color-blanco);
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            border-radius: 10px;
+            z-index: 100;
+            margin-top: 8px;
+        }
+        .dropdown-content a {
+            color: var(--color-primario);
+            padding: 14px 18px;
+            text-decoration: none;
+            display: block;
+            font-weight: 600;
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s, color 0.2s;
+        }
+        .dropdown-content a:last-child { border-bottom: none; }
+        .dropdown-content a:hover {
+            background: var(--color-acento);
+            color: var(--color-blanco);
+        }
+        .show { display: block; }
+        #navbar-right { display: flex; align-items: center; }
+    </style>
+</head>
+<body id="cuerpo">
+    <header id="barrasuperior">
+        <div class="padding" id="barrasuperior__ordenar">
+            <div id="barrasuperior__seccion1">
+                <img src="../assets/imagenes/favicon_reverse.png" alt="Logo Fletes Milo" id="barrasuperior__seccion1__logoenp">
+                <a href="../index.html" style="text-decoration:none;"><h1 id="barrasuperior__seccion1__nombreweb" style="cursor:pointer;">Fletes Milo</h1></a>
+            </div>
+            <div id="navbar-right">
+                <div class="dropdown">
+                    <button id="dropdownMenuBtn" onclick="toggleDropdown()" aria-haspopup="true" aria-expanded="false">☰ Menú</button>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <a href="sobre-nosotros.html">Sobre Nosotros</a>
+                        <a href="servicio.html">Servicio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="encabezado">
+            <img src="../assets/imagenes/Header.png" alt="Camión de Fletes Milo" id="encabezado__contenedor__escudo">
+            <h2 id="encabezado__contenedor__titulo">Contacto</h2>
+            <h3 id="encabezado__contenedor__subtitulo">¿Listo para mudarte o necesitás un flete? ¡Contactanos!</h3>
+        </section>
+        <section id="seccion">
+            <div class="padding">
+                <hr class="separador">
+                <article id="seccion__articulo1">
+                    <div id="seccion__articulo1__contenedor1__subcontenedor">
+                        <h2 id="seccion__articulo1__contenedor1__subcontenedor__titulo">Datos de contacto</h2>
+                    </div>
+                    <div id="seccion__articulo1__contenedor2" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center;">
+                        <div style="flex:1; min-width:220px;">
+                            <p style="font-size:1.1rem; margin-bottom:10px;">📞 <b>Teléfono:</b> <span style="color:var(--color-acento);">11 1234 5678</span></p>
+                            <p style="font-size:1.1rem; margin-bottom:10px;">📧 <b>Email:</b> <span style="color:var(--color-acento);">contacto@fletesmilo.com</span></p>
+                            <p style="font-size:1.1rem; margin-bottom:10px;">📍 <b>Dirección:</b> <span style="color:var(--color-acento);">Av. Siempre Viva 123, Buenos Aires</span></p>
+                        </div>
+                        <div style="flex:1; min-width:220px;">
+                            <form style="background:#fff; border-radius:12px; box-shadow:var(--sombra); padding:22px 18px; display:flex; flex-direction:column; gap:12px;">
+                                <label for="nombre" style="font-weight:600;">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" required style="padding:8px; border-radius:6px; border:1px solid var(--color-gris-oscuro);">
+                                <label for="email" style="font-weight:600;">Email</label>
+                                <input type="email" id="email" name="email" required style="padding:8px; border-radius:6px; border:1px solid var(--color-gris-oscuro);">
+                                <label for="mensaje" style="font-weight:600;">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="3" required style="padding:8px; border-radius:6px; border:1px solid var(--color-gris-oscuro);"></textarea>
+                                <button type="submit" class="btn-header" style="margin-top:8px;">Enviar consulta</button>
+                            </form>
+                        </div>
+                    </div>
+                </article>
+                <hr class="separador">
+                <article id="seccion__articulo2">
+                    <div id="seccion__articulo2__contenedor1__subcontenedor">
+                        <h2 id="seccion__articulo2__contenedor1__subcontenedor__titulo">Testimonios</h2>
+                    </div>
+                    <div id="seccion__articulo2__contenedor2" style="display:flex; gap:24px; flex-wrap:wrap; justify-content:center;">
+                        <blockquote style="background:#fff; border-left:4px solid var(--color-acento); padding:18px 22px; border-radius:10px; max-width:340px; box-shadow:var(--sombra);">
+                            "Excelente atención y rapidez en la respuesta. ¡Muy recomendables!"<br><span style="font-weight:600; color:var(--color-secundario);">- Sofía R.</span>
+                        </blockquote>
+                        <blockquote style="background:#fff; border-left:4px solid var(--color-verde); padding:18px 22px; border-radius:10px; max-width:340px; box-shadow:var(--sombra);">
+                            "El formulario fue fácil de usar y me contactaron enseguida. ¡Gracias!"<br><span style="font-weight:600; color:var(--color-secundario);">- Diego M.</span>
+                        </blockquote>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer id="pie">
+        <div class="footer-wrapper padding">
+            <div class="footer-columns" style="justify-content:center;">
+                <div style="display:flex; gap:20px; align-items:center;">
+                    <a href="#" title="Instagram"><img src="../assets/instagram.svg" alt="Instagram" width="28"></a>
+                    <a href="#" title="Facebook"><img src="../assets/linkedin.svg" alt="LinkedIn" width="28"></a>
+                    <a href="#" title="Twitter"><img src="../assets/twitter.svg" alt="Twitter" width="28"></a>
+                    <a href="#" class="btn-footer" style="margin-left:20px;">Sobre Nosotros</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <small>© Fletes Milo. <span id="year"></span></small>
+            </div>
+        </div>
+        <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+    </footer>
+</body>
+</html>

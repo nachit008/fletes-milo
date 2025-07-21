@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Fletes Milo</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../assets/imagenes/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <script>
+        function toggleDropdown() {
+            var menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('show');
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('#dropdownMenuBtn')) {
+                var dropdowns = document.getElementsByClassName('dropdown-content');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: var(--color-blanco);
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            border-radius: 10px;
+            z-index: 100;
+            margin-top: 8px;
+        }
+        .dropdown-content a {
+            color: var(--color-primario);
+            padding: 14px 18px;
+            text-decoration: none;
+            display: block;
+            font-weight: 600;
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s, color 0.2s;
+        }
+        .dropdown-content a:last-child { border-bottom: none; }
+        .dropdown-content a:hover {
+            background: var(--color-acento);
+            color: var(--color-blanco);
+        }
+        .show { display: block; }
+        #navbar-right { display: flex; align-items: center; }
+    </style>
+</head>
+<body id="cuerpo">
+    <header id="barrasuperior">
+        <div class="padding" id="barrasuperior__ordenar">
+            <div id="barrasuperior__seccion1">
+                <img src="../assets/imagenes/favicon_reverse.png" alt="Logo Fletes Milo" id="barrasuperior__seccion1__logoenp">
+                <a href="../index.html" style="text-decoration:none;"><h1 id="barrasuperior__seccion1__nombreweb" style="cursor:pointer;">Fletes Milo</h1></a>
+            </div>
+            <div id="navbar-right">
+                <div class="dropdown">
+                    <button id="dropdownMenuBtn" onclick="toggleDropdown()" aria-haspopup="true" aria-expanded="false">☰ Menú</button>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <a href="sobre-nosotros.html">Sobre Nosotros</a>
+                        <a href="servicio.html">Servicio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="encabezado">
+            <img src="../assets/imagenes/camion_familia.png" alt="Equipo de Fletes Milo" id="encabezado__contenedor__escudo">
+            <h2 id="encabezado__contenedor__titulo">Sobre Nosotros</h2>
+            <h3 id="encabezado__contenedor__subtitulo">Más de 15 años brindando confianza y seguridad en cada traslado</h3>
+        </section>
+        <section id="seccion">
+            <div class="padding">
+                <hr class="separador">
+                <article id="seccion__articulo1">
+                    <div id="seccion__articulo1__contenedor1__subcontenedor">
+                        <h2 id="seccion__articulo1__contenedor1__subcontenedor__titulo">Nuestra Historia</h2>
+                    </div>
+                    <div id="seccion__articulo1__contenedor2" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center;">
+                        <div style="flex:1; min-width:220px;">
+                            <p style="font-size:1.1rem;">Fletes Milo nació como un emprendimiento familiar con el objetivo de ofrecer un servicio de mudanzas y fletes diferente: cercano, responsable y seguro. Con el paso de los años, nos consolidamos como una de las empresas más confiables de la zona, gracias a la dedicación y el compromiso de nuestro equipo.</p>
+                        </div>
+                        <div style="flex:1; min-width:220px; display:flex; align-items:center; justify-content:center;">
+                            <img src="../assets/imagenes/equipo.png" alt="Nuestro equipo" style="background:#e3eaf2; width:220px; height:150px; object-fit:contain; border-radius:12px;">
+                        </div>
+                    </div>
+                </article>
+                <hr class="separador">
+                <article id="seccion__articulo2">
+                    <div id="seccion__articulo2__contenedor1__subcontenedor">
+                        <h2 id="seccion__articulo2__contenedor1__subcontenedor__titulo">Nuestros Valores</h2>
+                    </div>
+                    <div id="seccion__articulo2__contenedor2" style="display:flex; gap:32px; flex-wrap:wrap;">
+                        <ul style="font-size:1.1rem; line-height:1.7;">
+                            <li><b>Compromiso:</b> Cumplimos con cada cliente como si fuera el único.</li>
+                            <li><b>Responsabilidad:</b> Cuidamos cada objeto como propio.</li>
+                            <li><b>Transparencia:</b> Presupuestos claros y sin sorpresas.</li>
+                            <li><b>Calidez humana:</b> Trato cordial y personalizado.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer id="pie">
+        <div class="footer-wrapper padding">
+            <div class="footer-columns" style="justify-content:center;">
+                <div style="display:flex; gap:20px; align-items:center;">
+                    <a href="#" title="Instagram"><img src="../assets/instagram.svg" alt="Instagram" width="28"></a>
+                    <a href="#" title="Facebook"><img src="../assets/linkedin.svg" alt="LinkedIn" width="28"></a>
+                    <a href="#" title="Twitter"><img src="../assets/twitter.svg" alt="Twitter" width="28"></a>
+                    <a href="#" class="btn-footer" style="margin-left:20px;">Sobre Nosotros</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <small>© Fletes Milo. <span id="year"></span></small>
+            </div>
+        </div>
+        <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+    </footer>
+</body>
+</html> 
