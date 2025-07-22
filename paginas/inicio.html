@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicio - Fletes Milo</title>
+    <title>Inicio - Fletes Milo</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="shortcut icon" href="../assets/imagenes/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,6 +55,7 @@
         }
         .show { display: block; }
         #navbar-right { display: flex; align-items: center; }
+        /* Animación de fondo en el encabezado */
         #encabezado {
             background: linear-gradient(120deg, #2d9cdb 0%, #ff6f00 100%);
             animation: bgMove 8s ease-in-out infinite alternate;
@@ -63,10 +64,22 @@
             0% { background-position: 0% 50%; }
             100% { background-position: 100% 50%; }
         }
-        article[data-animate]:hover {
+        /* Glow en testimonios */
+        blockquote:hover {
             box-shadow: 0 0 32px 4px #ff6f00, 0 8px 32px rgba(0,86,214,0.13);
             transform: scale(1.06) rotate(-1deg);
         }
+        /* Efecto tilt en imágenes de servicios */
+        #seccion__articulo1__contenedor2__subcontenedor2 img,
+        #seccion__articulo2__contenedor2__subcontenedor1__subsubcontenedor1__imagen {
+            transition: transform 0.4s cubic-bezier(.23,1.02,.32,1), box-shadow 0.3s;
+        }
+        #seccion__articulo1__contenedor2__subcontenedor2 img:hover,
+        #seccion__articulo2__contenedor2__subcontenedor1__subsubcontenedor1__imagen:hover {
+            transform: scale(1.08) rotateY(8deg);
+            box-shadow: 0 8px 32px #2d9cdb44;
+        }
+        /* Glow en botones principales */
         .btn-header:hover {
             box-shadow: 0 0 24px 4px #ff6f00, 0 6px 24px rgba(0,86,214,0.18);
         }
@@ -93,45 +106,82 @@
     </a>
     <main style="padding-top:56px;margin:0;width:100vw;box-sizing:border-box;background:var(--color-gris);flex:1 0 auto;min-height:0;">
         <section id="encabezado" data-animate>
-            <img src="../assets/imagenes/Senderismo.png" alt="Servicio de Fletes Milo" id="encabezado__contenedor__escudo">
-            <h2 id="encabezado__contenedor__titulo">Nuestros Servicios</h2>
-            <h3 id="encabezado__contenedor__subtitulo">Soluciones a medida para cada necesidad de traslado</h3>
+            <img src="../assets/imagenes/Header.png" alt="Camión de Fletes Milo" id="encabezado__contenedor__escudo">
+            <h2 id="encabezado__contenedor__titulo">Fletes y Mudanzas</h2>
+            <h3 id="encabezado__contenedor__subtitulo">Tu carga, nuestro compromiso. Servicio seguro, rápido y confiable.</h3>
+            <div style="display:flex; flex-wrap:wrap; gap:18px; justify-content:center; margin-top:18px;">
+                <div style="background:rgba(255,255,255,0.85); border-radius:10px; padding:10px 18px; box-shadow:0 2px 8px #0001; display:flex; align-items:center; gap:8px; font-size:1.08rem;">
+                    <span>📞</span> <b>Tel:</b> <a href="tel:+5491127622178" style="color:var(--color-acento);text-decoration:none;">+54 9 11 2762-2178</a>
+                </div>
+                <div style="background:rgba(255,255,255,0.85); border-radius:10px; padding:10px 18px; box-shadow:0 2px 8px #0001; display:flex; align-items:center; gap:8px; font-size:1.08rem;">
+                    <span>🟢</span> <b>WhatsApp:</b> <a href="https://wa.me/5491127622178?text=quiero%20solicitar%20presupuesto" target="_blank" style="color:var(--color-verde);text-decoration:none;">Solicitar presupuesto</a>
+                </div>
+                <div style="background:rgba(255,255,255,0.85); border-radius:10px; padding:10px 18px; box-shadow:0 2px 8px #0001; display:flex; align-items:center; gap:8px; font-size:1.08rem;">
+                    <span>📍</span> <b>Cobertura:</b> CABA y GBA
+                </div>
+                <div style="background:rgba(255,255,255,0.85); border-radius:10px; padding:10px 18px; box-shadow:0 2px 8px #0001; display:flex; align-items:center; gap:8px; font-size:1.08rem;">
+                    <span>⭐</span> <b>+15 años de experiencia</b>
+                </div>
+            </div>
+            <a href="https://wa.me/5491127622178?text=quiero%20solicitar%20presupuesto" class="btn-header" style="margin-top:22px;" target="_blank" rel="noopener">¡Solicitá tu presupuesto ahora!</a>
         </section>
         <section id="seccion" data-animate>
             <div class="padding">
                 <hr class="separador">
                 <article id="seccion__articulo1" data-animate>
                     <div id="seccion__articulo1__contenedor1__subcontenedor">
-                        <h2 id="seccion__articulo1__contenedor1__subcontenedor__titulo">¿Qué ofrecemos?</h2>
+                        <h2 id="seccion__articulo1__contenedor1__subcontenedor__titulo">Nuestros Servicios</h2>
                     </div>
-                    <div id="seccion__articulo1__contenedor2" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center;">
-                        <div style="flex:1; min-width:220px;">
+                    <div id="seccion__articulo1__contenedor2">
+                        <div id="seccion__articulo1__contenedor2__subcontenedor1">
                             <ul style="font-size:1.1rem; line-height:1.7;">
                                 <li>Fletes y mudanzas locales y nacionales</li>
                                 <li>Traslado de muebles, electrodomésticos y objetos delicados</li>
                                 <li>Servicio express y programado</li>
                                 <li>Asesoramiento personalizado</li>
                                 <li>Presupuesto sin cargo</li>
+                                <li><b>Horario de atención:</b> 08hs a 23hs</li>
+                                <li><b>Trabajo de soga</b></li>
+                                <li><b>Desalojos</b></li>
                             </ul>
                         </div>
-                        <div style="flex:1; min-width:220px; display:flex; align-items:center; justify-content:center;">
-                            <img src="../assets/imagenes/camion_familia.png" alt="Camión de Fletes Milo" style="background:#e3eaf2; width:220px; height:150px; object-fit:contain; border-radius:12px;">
+                        <div id="seccion__articulo1__contenedor2__subcontenedor2">
+                            <img src="../assets/imagenes/camion_familia.png" alt="Equipo de Fletes Milo" style="background:#e3eaf2; width:300px; height:200px; object-fit:contain; border-radius:12px;">
                         </div>
                     </div>
                 </article>
                 <hr class="separador">
                 <article id="seccion__articulo2" data-animate>
                     <div id="seccion__articulo2__contenedor1__subcontenedor">
-                        <h2 id="seccion__articulo2__contenedor1__subcontenedor__titulo">¿Cómo trabajamos?</h2>
+                        <h2 id="seccion__articulo2__contenedor1__subcontenedor__titulo">¿Por qué elegirnos?</h2>
                     </div>
-                    <div id="seccion__articulo2__contenedor2" style="display:flex; gap:32px; flex-wrap:wrap;">
-                        <ul style="font-size:1.1rem; line-height:1.7;">
-                            <li>Coordinación previa y asesoramiento</li>
-                            <li>Personal capacitado y trato cordial</li>
-                            <li>Unidades modernas y equipadas</li>
-                            <li>Seguimiento y comunicación constante</li>
-                            <li>Seguro de carga incluido</li>
-                        </ul>
+                    <div id="seccion__articulo2__contenedor2">
+                        <div style="flex:1;">
+                            <ul style="font-size:1.1rem; line-height:1.7;">
+                                <li>+15 años de experiencia en el rubro</li>
+                                <li>Personal capacitado y trato cordial</li>
+                                <li>Unidades modernas y equipadas</li>
+                                <li>Seguimiento y comunicación constante</li>
+                                <li>Seguro de carga incluido</li>
+                            </ul>
+                        </div>
+                        <div style="flex:1; display:flex; align-items:center; justify-content:center;">
+                            <img src="../assets/imagenes/Senderismo.png" alt="Servicio profesional" style="background:#e3eaf2; width:220px; height:150px; object-fit:contain; border-radius:12px;">
+                        </div>
+                    </div>
+                </article>
+                <hr class="separador">
+                <article id="seccion__articulo3" data-animate>
+                    <div id="seccion__articulo3__contenedor1__subcontenedor">
+                        <h2 id="seccion__articulo3__contenedor1__subcontenedor__titulo">Testimonios</h2>
+                    </div>
+                    <div id="seccion__articulo3__contenedor2" style="display:flex; gap:24px; flex-wrap:wrap; justify-content:center;">
+                        <blockquote style="background:#fff; border-left:4px solid var(--color-acento); padding:18px 22px; border-radius:10px; max-width:340px; box-shadow:var(--sombra);">
+                            "Excelente servicio, puntuales y muy cuidadosos con mis cosas. ¡Recomendados!"<br><span style="font-weight:600; color:var(--color-secundario);">- Laura G.</span>
+                        </blockquote>
+                        <blockquote style="background:#fff; border-left:4px solid var(--color-verde); padding:18px 22px; border-radius:10px; max-width:340px; box-shadow:var(--sombra);">
+                            "Me resolvieron la mudanza en el día y todo llegó perfecto. Muy profesionales."<br><span style="font-weight:600; color:var(--color-secundario);">- Martín P.</span>
+                        </blockquote>
                     </div>
                 </article>
             </div>

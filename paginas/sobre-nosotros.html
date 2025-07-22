@@ -55,36 +55,52 @@
         }
         .show { display: block; }
         #navbar-right { display: flex; align-items: center; }
+        #encabezado {
+            background: linear-gradient(120deg, #2d9cdb 0%, #ff6f00 100%);
+            animation: bgMove 8s ease-in-out infinite alternate;
+        }
+        @keyframes bgMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        article[data-animate]:hover {
+            box-shadow: 0 0 32px 4px #ff6f00, 0 8px 32px rgba(0,86,214,0.13);
+            transform: scale(1.06) rotate(-1deg);
+        }
+        .btn-header:hover {
+            box-shadow: 0 0 24px 4px #ff6f00, 0 6px 24px rgba(0,86,214,0.18);
+        }
     </style>
 </head>
-<body id="cuerpo">
-    <header id="barrasuperior">
-        <div class="padding" id="barrasuperior__ordenar">
-            <div id="barrasuperior__seccion1">
-                <img src="../assets/imagenes/favicon_reverse.png" alt="Logo Fletes Milo" id="barrasuperior__seccion1__logoenp">
-                <a href="../index.html" style="text-decoration:none;"><h1 id="barrasuperior__seccion1__nombreweb" style="cursor:pointer;">Fletes Milo</h1></a>
-            </div>
-            <div id="navbar-right">
-                <div class="dropdown">
-                    <button id="dropdownMenuBtn" onclick="toggleDropdown()" aria-haspopup="true" aria-expanded="false">☰ Menú</button>
-                    <div id="dropdownMenu" class="dropdown-content">
-                        <a href="sobre-nosotros.html">Sobre Nosotros</a>
-                        <a href="servicio.html">Servicio</a>
-                    </div>
-                </div>
-            </div>
+<body id="cuerpo" style="background:var(--color-gris);min-height:100vh;display:flex;flex-direction:column;">
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="../assets/imagenes/favicon_reverse.png" alt="Logo Fletes Milo">
+            <a href="inicio.html">Fletes Milo</a>
         </div>
-    </header>
-    <main>
-        <section id="encabezado">
+        <button class="navbar-toggle" onclick="document.querySelector('.navbar-menu').classList.toggle('show')">☰</button>
+        <div class="navbar-menu">
+            <a href="sobre-nosotros.html"><span>🏢</span>Sobre Nosotros</a>
+            <a href="servicio.html"><span>🚚</span>Servicio</a>
+            <a href="contacto.html"><span>✉️</span>Contacto</a>
+        </div>
+    </nav>
+    <a href="https://wa.me/5491127622178?text=quiero%20solicitar%20presupuesto" class="whatsapp-float" target="_blank" title="WhatsApp" style="position:fixed;bottom:clamp(16px,4vw,32px);right:clamp(12px,4vw,32px);z-index:1200;">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="16" fill="#25D366"/>
+            <path d="M23.472 18.294c-.348-.174-2.06-1.016-2.38-1.134-.32-.12-.554-.174-.788.174-.234.348-.902 1.134-1.106 1.368-.202.234-.404.262-.752.088-.348-.174-1.472-.542-2.803-1.728-1.036-.926-1.734-2.07-1.938-2.418-.202-.348-.022-.536.152-.71.156-.156.348-.404.522-.606.174-.202.232-.348.348-.58.116-.232.058-.434-.03-.606-.088-.174-.788-1.902-1.08-2.606-.284-.684-.574-.59-.788-.6-.202-.008-.434-.01-.666-.01-.232 0-.606.088-.924.434-.318.348-1.21 1.184-1.21 2.888 0 1.704 1.24 3.352 1.414 3.586.174.232 2.44 3.726 5.914 5.08.828.32 1.474.51 1.978.652.83.236 1.588.202 2.188.122.668-.088 2.06-.84 2.352-1.652.292-.812.292-1.508.204-1.652-.088-.144-.318-.232-.666-.406z" fill="#fff"/>
+        </svg>
+    </a>
+    <main style="padding-top:56px;margin:0;width:100vw;box-sizing:border-box;background:var(--color-gris);flex:1 0 auto;min-height:0;">
+        <section id="encabezado" data-animate>
             <img src="../assets/imagenes/camion_familia.png" alt="Equipo de Fletes Milo" id="encabezado__contenedor__escudo">
             <h2 id="encabezado__contenedor__titulo">Sobre Nosotros</h2>
             <h3 id="encabezado__contenedor__subtitulo">Más de 15 años brindando confianza y seguridad en cada traslado</h3>
         </section>
-        <section id="seccion">
+        <section id="seccion" data-animate>
             <div class="padding">
                 <hr class="separador">
-                <article id="seccion__articulo1">
+                <article id="seccion__articulo1" data-animate>
                     <div id="seccion__articulo1__contenedor1__subcontenedor">
                         <h2 id="seccion__articulo1__contenedor1__subcontenedor__titulo">Nuestra Historia</h2>
                     </div>
@@ -98,7 +114,7 @@
                     </div>
                 </article>
                 <hr class="separador">
-                <article id="seccion__articulo2">
+                <article id="seccion__articulo2" data-animate>
                     <div id="seccion__articulo2__contenedor1__subcontenedor">
                         <h2 id="seccion__articulo2__contenedor1__subcontenedor__titulo">Nuestros Valores</h2>
                     </div>
@@ -114,21 +130,41 @@
             </div>
         </section>
     </main>
-    <footer id="pie">
+    <footer id="pie" style="flex-shrink:0;">
         <div class="footer-wrapper padding">
-            <div class="footer-columns" style="justify-content:center;">
-                <div style="display:flex; gap:20px; align-items:center;">
-                    <a href="#" title="Instagram"><img src="../assets/instagram.svg" alt="Instagram" width="28"></a>
-                    <a href="#" title="Facebook"><img src="../assets/linkedin.svg" alt="LinkedIn" width="28"></a>
-                    <a href="#" title="Twitter"><img src="../assets/twitter.svg" alt="Twitter" width="28"></a>
-                    <a href="#" class="btn-footer" style="margin-left:20px;">Sobre Nosotros</a>
+            <div class="footer-columns">
+                <div class="footer-social">
+                    <a href="https://instagram.com/fletes.milo" title="Instagram" target="_blank" rel="noopener"><img src="../assets/instagram.svg" alt="Instagram" width="28"></a>
+                    <a href="mailto:fletes.milo1@gmail.com" title="Gmail" target="_blank" rel="noopener"><img src="../assets/envelope.svg" alt="Gmail" width="28" style="vertical-align:middle;"></a>
+                </div>
+                <div class="footer-contact">
+                    <div style="margin-bottom:6px;"><b>Dirección:</b> Av. Siempre Viva 123, Buenos Aires</div>
+                    <div style="margin-bottom:6px;"><b>Horario:</b> 08hs a 23hs</div>
+                    <div style="margin-bottom:6px;"><b>Tel:</b> <a href="tel:+5491127622178" style="color:#fff; text-decoration:underline;">+54 9 11 2762-2178</a></div>
+                    <div style="margin-bottom:6px;"><b>WhatsApp:</b> <a href="https://wa.me/5491127622178?text=quiero%20solicitar%20presupuesto" target="_blank" style="color:#25d366; text-decoration:underline;">+54 9 11 2762-2178</a></div>
+                </div>
+                <div class="footer-frase">
+                    <span>✔️</span> Más de 15 años brindando confianza y seguridad en cada traslado
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-bottom" style="text-align:center; margin-top:10px;">
                 <small>© Fletes Milo. <span id="year"></span></small>
             </div>
         </div>
         <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
     </footer>
+    <script>
+    // Animación de entrada en scroll
+    function animateOnScroll() {
+        document.querySelectorAll('[data-animate]').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 60) {
+                el.classList.add('visible');
+            }
+        });
+    }
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('DOMContentLoaded', animateOnScroll);
+    </script>
 </body>
 </html> 
