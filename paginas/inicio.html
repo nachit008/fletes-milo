@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Fletes Milo</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../assets/imagenes/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <script>
+        function toggleDropdown() {
+            var menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('show');
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('#dropdownMenuBtn')) {
+                var dropdowns = document.getElementsByClassName('dropdown-content');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body id="cuerpo" style="background:var(--color-gris);min-height:100vh;display:flex;flex-direction:column;">
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="../assets/imagenes/favicon_reverse.png" alt="Logo Fletes Milo">
+            <a href="inicio.html">Fletes Milo</a>
+        </div>
+        <button class="navbar-toggle" onclick="document.querySelector('.navbar-menu').classList.toggle('show')">☰</button>
+        <div class="navbar-menu">
+            <a href="sobre-nosotros.html"><span>🏢</span>Sobre Nosotros</a>
+            <a href="servicio.html"><span>🚚</span>Servicio</a>
+            <a href="contacto.html"><span>✉️</span>Contacto</a>
+        </div>
+    </nav>
+    <a href="https://wa.me/5491127622178?text=quiero%20solicitar%20presupuesto" class="whatsapp-float" target="_blank" title="WhatsApp" style="position:fixed;bottom:clamp(16px,4vw,32px);right:clamp(12px,4vw,32px);z-index:1200;">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="16" fill="#25D366"/>
+            <path d="M23.472 18.294c-.348-.174-2.06-1.016-2.38-1.134-.32-.12-.554-.174-.788.174-.234.348-.902 1.134-1.106 1.368-.202.234-.404.262-.752.088-.348-.174-1.472-.542-2.803-1.728-1.036-.926-1.734-2.07-1.938-2.418-.202-.348-.022-.536.152-.71.156-.156.348-.404.522-.606.174-.202.232-.348.348-.58.116-.232.058-.434-.03-.606-.088-.174-.788-1.902-1.08-2.606-.284-.684-.574-.59-.788-.6-.202-.008-.434-.01-.666-.01-.232 0-.606.088-.924.434-.318.348-1.21 1.184-1.21 2.888 0 1.704 1.24 3.352 1.414 3.586.174.232 2.44 3.726 5.914 5.08.828.32 1.474.51 1.978.652.83.236 1.588.202 2.188.122.668-.088 2.06-.84 2.352-1.652.292-.812.292-1.508.204-1.652-.088-.144-.318-.232-.666-.406z" fill="#fff"/>
+        </svg>
+    </a>
+    <main style="padding-top:56px;margin:0;width:100vw;box-sizing:border-box;background:#e3eaf2;flex:1 0 auto;min-height:0;">
+        <section id="encabezado" data-animate style="background: #e3eaf2 !important;">
+            <img src="../assets/imagenes/Header.png" alt="Camión de Fletes Milo" id="encabezado__contenedor__escudo">
+            <h2 id="encabezado__contenedor__titulo">Fletes y Mudanzas</h2>
+            <h3 id="encabezado__contenedor__subtitulo">Tu carga, nuestro compromiso. Servicio seguro, rápido y confiable.</h3>
+            <div style="display:flex; flex-wrap:wrap; gap:18px; justify-content:center; margin-top:18px;">
+                <div style="background:rgba(255,255,255,0.85); border-radius:10px; padding:10px 18px; box-shadow:0 2px 8px #0001; display:flex; align-items:center; gap:8px; font-size:1.08rem;">
+                    <span>📞</span> <b>Tel:</b> <a href="tel:+5491127622178" style="color:var(--color-acento);text-decoration:none;">+54 9 11 2762-2178</a>
+                </div>
+                <div style="background:rgba(255,255,255,0.85); border-radius:10px; padding:10px 18px; box-shadow:0 2px 8px #0001; display:flex; align-items:center; gap:8px; font-size:1.08rem;">
+                    <span>📍</span> <b>Cobertura:</b> CABA y GBA
+                </div>
+            </div>
+            <a href="https://wa.me/5491127622178?text=quiero%20solicitar%20presupuesto" class="btn-header" style="margin-top:22px;" target="_blank" rel="noopener">¡Solicitá tu presupuesto ahora!</a>
+        </section>
+        <section id="seccion" data-animate>
+            <div class="padding">
+                <hr class="separador">
+                <article id="seccion__articulo1" data-animate>
+                    <div id="seccion__articulo1__contenedor1__subcontenedor">
+                        <h2 id="seccion__articulo1__contenedor1__subcontenedor__titulo">Nuestros Servicios</h2>
+                    </div>
+                    <div id="seccion__articulo1__contenedor2">
+                        <div id="seccion__articulo1__contenedor2__subcontenedor1">
+                            <ul style="font-size:1.1rem; line-height:1.7;">
+                                <li>Fletes y mudanzas locales y nacionales</li>
+                                <li>Traslado de muebles, electrodomésticos y objetos delicados</li>
+                                <li>Servicio express y programado</li>
+                                <li>Asesoramiento personalizado</li>
+                                <li>Presupuesto sin cargo</li>
+                                <li><b>Horario de atención:</b> 08hs a 23hs</li>
+                                <li><b>Trabajo de soga</b></li>
+                                <li><b>Desalojos</b></li>
+                            </ul>
+                        </div>
+                        <div id="seccion__articulo1__contenedor2__subcontenedor2">
+                            <img src="../assets/imagenes/camion_familia.png" alt="Equipo de Fletes Milo" style="background:#e3eaf2; width:300px; height:200px; object-fit:contain; border-radius:12px;">
+                        </div>
+                    </div>
+                </article>
+                <hr class="separador">
+                <article id="seccion__articulo2" data-animate>
+                    <div id="seccion__articulo2__contenedor1__subcontenedor">
+                        <h2 id="seccion__articulo2__contenedor1__subcontenedor__titulo">¿Por qué elegirnos?</h2>
+                    </div>
+                    <div id="seccion__articulo2__contenedor2">
+                        <div style="flex:1;">
+                            <ul style="font-size:1.1rem; line-height:1.7;">
+                                <li>+15 años de experiencia en el rubro</li>
+                                <li>Personal capacitado y trato cordial</li>
+                                <li>Unidades modernas y equipadas</li>
+                                <li>Seguimiento y comunicación constante</li>
+                                <li>Seguro de carga incluido</li>
+                            </ul>
+                        </div>
+                        <div style="flex:1; display:flex; align-items:center; justify-content:center;">
+                            <img src="../assets/imagenes/Senderismo.png" alt="Servicio profesional" style="background:#e3eaf2; width:220px; height:150px; object-fit:contain; border-radius:12px;">
+                        </div>
+                    </div>
+                </article>
+                <hr class="separador">
+                <article id="seccion__articulo3" data-animate>
+                    <div id="seccion__articulo3__contenedor1__subcontenedor">
+                        <h2 id="seccion__articulo3__contenedor1__subcontenedor__titulo">Testimonios</h2>
+                    </div>
+                    <div id="seccion__articulo3__contenedor2" style="display:flex; gap:24px; flex-wrap:wrap; justify-content:center;">
+                        <blockquote style="background:#fff; border-left:4px solid var(--color-acento); padding:18px 22px; border-radius:10px; max-width:340px; box-shadow:var(--sombra);">
+                            "Excelente servicio, puntuales y muy cuidadosos con mis cosas. ¡Recomendados!"<br><span style="font-weight:600; color:var(--color-secundario);">- Laura G.</span>
+                        </blockquote>
+                        <blockquote style="background:#fff; border-left:4px solid var(--color-verde); padding:18px 22px; border-radius:10px; max-width:340px; box-shadow:var(--sombra);">
+                            "Me resolvieron la mudanza en el día y todo llegó perfecto. Muy profesionales."<br><span style="font-weight:600; color:var(--color-secundario);">- Martín P.</span>
+                        </blockquote>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer id="pie" style="flex-shrink:0;">
+        <div class="footer-wrapper padding">
+            <div class="footer-columns" style="display:flex;align-items:center;justify-content:center;gap:0;">
+                <div class="footer-social" style="flex:0 0 120px;display:flex;align-items:center;justify-content:flex-start;">
+                    <a href="https://instagram.com/fletes.milo" title="Instagram" target="_blank"><img src="../assets/instagram.svg" alt="Instagram" width="28"></a>
+                    <a href="https://mail.google.com/mail/?view=cm&to=fletes.milo1@gmail.com" title="Gmail" target="_blank"><img src="../assets/envelope.svg" alt="Gmail" width="28" style="vertical-align:middle;"></a>
+                </div>
+                <div class="footer-contact" style="flex:1;text-align:center;margin:0 auto;">
+                    <div style="margin-bottom:6px;"><b>Horario:</b> 08hs a 23hs</div>
+                    <div style="margin-bottom:6px;"><b>Tel:</b> <a href="tel:+5491127622178" style="color:#4a6fa5; text-decoration:underline;">+54 9 11 2762-2178</a></div>
+                    <div style="margin-bottom:6px;"><b>WhatsApp:</b> <a href="https://wa.me/5491127622178?text=quiero%20solicitar%20presupuesto" target="_blank" style="color:#4a6fa5; text-decoration:underline;">+54 9 11 2762-2178</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom" style="text-align:center; margin-top:10px;">
+                <small>© Fletes Milo. <span id="year"></span></small>
+            </div>
+        </div>
+        <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+    </footer>
+    <script>
+    // Animación de entrada en scroll
+    function animateOnScroll() {
+        document.querySelectorAll('[data-animate]').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 60) {
+                el.classList.add('visible');
+            }
+        });
+    }
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('DOMContentLoaded', animateOnScroll);
+    </script>
+</body>
+</html> 
